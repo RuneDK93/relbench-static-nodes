@@ -1,3 +1,6 @@
+
+
+
 <p align="center"><img src="https://relbench.stanford.edu/img/logo.png" alt="logo" width="600px" /></p>
 
 ----
@@ -13,6 +16,20 @@
 
 <!-- [<img align="center" src="https://relbench.stanford.edu/img/favicon.png" width="20px" />   -->
 [**Website**](https://relbench.stanford.edu) | [**Position Paper**](https://proceedings.mlr.press/v235/fey24a.html) |  [**Benchmark Paper**](https://arxiv.org/abs/2407.20060) | [**Mailing List**](https://groups.google.com/forum/#!forum/relbench/join)
+
+
+# Fork Notes: Support for Time-Independent Nodes
+
+This fork extends the RelBench platform to provide explicit support for time-independent (non-timestamped) node tables, enabling tasks and models that rely on static entity properties.
+
+## What’s New in This Fork
+- Added a new type of time-independent node property task, which constructs tasks to predict features of nominally time-independent node types like customers and articles in the H&M dataset. As of now 3 new tasks are included; customer-age, article-index, and article-colour.
+- Added functionality for correctly handling node tables without timestamps during normalsation and imputation before model training, which the upstream RelBench version assumes are always fully visible. This correct filtering ensures that time-independent nodes respect temporal data splits, preventing accidental inclusion of entities that first appear after validation or test time.
+
+
+These improvements allow the modelling of time-independent entity properties in the RelBench platform while strictly ensuring temporal causal correctness.
+
+
 
 # Overview
 
