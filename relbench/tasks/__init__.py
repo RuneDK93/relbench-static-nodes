@@ -250,6 +250,9 @@ register_task(
     ],
 )
 
+register_task("rel-hm", "article-colour-nth", hm.ArticleColourNthTransactionTask)
+register_task("rel-hm", "article-index-nth", hm.ArticleIndexNthTransactionTask)
+register_task("rel-hm", "customer-age-nth", hm.CustomerAgeNthTransactionTask)
 register_task("rel-hm", "user-item-purchase", hm.UserItemPurchaseTask)
 register_task("rel-hm", "user-churn", hm.UserChurnTask)
 register_task("rel-hm", "item-sales", hm.ItemSalesTask)
