@@ -191,7 +191,7 @@ class CustomerAgeNthTransactionTask(EntityTask):
     # Special attribute for time-independent node property tasks. 
     # This list specifies which features to remove from the INPUT graph to the task.
     # This should be the target feature, or any features that directly map to the target feature.    
-    remove_feats = ['age']
+    remove_columns = ['age']
 
     # Flag that this is a special type of time-independent node property task
     time_independent_node_task = True    
@@ -323,7 +323,7 @@ class ArticleIndexNthTransactionTask(EntityTask):
     # Special attribute for static node property tasks. 
     # This list specifies which features to remove from the INPUT graph to the task.
     # This should be the target feature, or any features that directly map to the target feature.
-    remove_feats = ['index_group_no', # target
+    remove_columns = ['index_group_no', # target
                     
                     'index_group_name', # Features that are very correlated with with target
                     'index_name',
@@ -496,7 +496,7 @@ class ArticleColourNthTransactionTask(EntityTask):
     # Special attribute for static node property tasks. 
     # This list specifies which features to remove from the INPUT graph to the task.
     # This should be the target feature, or any features that directly map to the target feature.      
-    remove_feats = ['colour_group_code', # target
+    remove_columns = ['colour_group_code', # target
                     
                     'colour_group_name',# Features that are very correlated with with target
                     'perceived_colour_value_name',
