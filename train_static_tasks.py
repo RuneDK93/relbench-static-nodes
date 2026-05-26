@@ -190,7 +190,7 @@ if len(remove_columns) > 0:
         table_name: {
             col: col_type
             for col, col_type in cols.items()
-            if not (table_name == target_col_table_name and col in remove_columns)
+            if not (col in remove_columns) # remove chosen columns from ALL tables, not just target table
         }
         for table_name, cols in col_to_stype_dict.items()
     }
